@@ -7,13 +7,15 @@ describe "recipes/index" do
         :name => "Name",
         :time => 1,
         :difficulty => "Difficulty",
-        :instructions => "Instructions"
+        :instructions => "Instructions",
+        :user_id => 2
       ),
       stub_model(Recipe,
         :name => "Name",
         :time => 1,
         :difficulty => "Difficulty",
-        :instructions => "Instructions"
+        :instructions => "Instructions",
+        :user_id => 2
       )
     ])
   end
@@ -25,5 +27,6 @@ describe "recipes/index" do
     assert_select "tr>td", :text => 1.to_s, :count => 2
     assert_select "tr>td", :text => "Difficulty".to_s, :count => 2
     assert_select "tr>td", :text => "Instructions".to_s, :count => 2
+    assert_select "tr>td", :text => 2.to_s, :count => 2
   end
 end

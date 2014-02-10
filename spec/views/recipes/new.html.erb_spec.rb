@@ -6,7 +6,8 @@ describe "recipes/new" do
       :name => "MyString",
       :time => 1,
       :difficulty => "MyString",
-      :instructions => "MyString"
+      :instructions => "MyString",
+      :user_id => 1
     ).as_new_record)
   end
 
@@ -19,6 +20,7 @@ describe "recipes/new" do
       assert_select "input#recipe_time[name=?]", "recipe[time]"
       assert_select "input#recipe_difficulty[name=?]", "recipe[difficulty]"
       assert_select "input#recipe_instructions[name=?]", "recipe[instructions]"
+      assert_select "input#recipe_user_id[name=?]", "recipe[user_id]"
     end
   end
 end

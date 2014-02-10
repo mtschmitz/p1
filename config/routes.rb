@@ -1,7 +1,7 @@
 P1::Application.routes.draw do
-  resources :users
-
   resources :recipes
+
+  resources :users
 
   resources :ingredients
 

@@ -6,7 +6,8 @@ describe "recipes/show" do
       :name => "Name",
       :time => 1,
       :difficulty => "Difficulty",
-      :instructions => "Instructions"
+      :instructions => "Instructions",
+      :user_id => 2
     ))
   end
 
@@ -17,5 +18,6 @@ describe "recipes/show" do
     rendered.should match(/1/)
     rendered.should match(/Difficulty/)
     rendered.should match(/Instructions/)
+    rendered.should match(/2/)
   end
 end
